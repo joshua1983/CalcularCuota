@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CalcularCuota</string>
+    <string name="txt_valor">Valor a prestar</string>
+    <string name="txt_interes">Interes</string>
+    <string name="txt_cuotas">Cuotas</string>
+    <string name="btn_calcular">Calcular</string>
+    <string name="txt_titulo">Resultados</string>
+    <string name="txt_valor_cuota">Valor cuota</string>
+</resources>
