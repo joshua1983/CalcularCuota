@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.setPadding
+import androidx.core.widget.doAfterTextChanged
 import com.example.calculocuota.dto.Cuota
 import java.text.DecimalFormat
 
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         boton.setOnClickListener{
             this.planPagos.clear()
-            val valorMonto = monto.text.toString()
+            val valorMonto = monto.text.toString().replace(",","")
             val plazoValor = plazo.text.toString()
             val interesValor = interes.text.toString()
             cuota.text = dec.format( calcularCuota(valorMonto,plazoValor, interesValor) )
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun pintarTabla(tabla:TableLayout){
+        tabla.removeAllViews()
         var id = 1
         this.planPagos.forEach{ cuota ->
 
